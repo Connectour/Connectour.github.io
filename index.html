@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connecting Tourism</title>
+  <link href="styles.css" rel="stylesheet">
   <script>
     // Define the tailwind object and config globally
     window.tailwind = {
@@ -19,139 +20,109 @@
     };
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Styles for the pop-up */
-    .intercom-popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 9999;
-    }
-
-    .intercom-popup.active {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .intercom-popup-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 90%;
-    }
-
-    /* Styles for the close button */
-    .intercom-popup-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 80vw; /* 80% of viewport width */
-      height: 80vh; /* 80% of viewport height */
-      position:relative;
-    }
-    .close-button {
-      position: absolute;
-      top: -15px;
-      right: -15px;
-      background-color: #da373d;
-      color: #fff;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-  </style>
 </head>
-  <body>
-    <!-- Hero Section -->
-    <section class="bg-blue-500 text-white py-20">
-      <div class="container mx-auto">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">Connectour</h1>
-        <p class="text-xl md:text-2xl">Connecting Tourism, Empowering Adventures.</p>
-        <button onclick="openPopup()" class="mt-8 px-6 py-3 bg-white text-blue-500 font-semibold rounded-full shadow-md">Try it out</button>
-      </div>
-    </section>
+<body>
+  <!-- Hero Section -->
+  <section class="bg-blue-500 text-white py-20">
+    <div class="container mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Connectour</h1>
+      <p class="text-xl md:text-2xl">Connecting Tourism, Empowering Adventures.</p>
+      <button onclick="openPopup()" class="mt-8 px-6 py-3 bg-white text-blue-500 font-semibold rounded-full shadow-md">Join the Journey</button>
+    </div>
+  </section>
 
-    <!-- Features Section -->
-    <section class="bg-gray-100 py-20">
-      <div class="container mx-auto">
-        <h2 class="text-3xl md:text-5xl font-bold mb-8">Key Features</h2>
-        <!-- Add your feature cards or content here -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-semibold mb-4">Simple implementation</h3>
-            <p>We guide your implementation; we keep it simple and can add our tool to any website or app.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-semibold mb-4">Integrations</h3>
-            <p>Integrations with your favourite tools for bookings, communication and operations.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-semibold mb-4">Cutting edge</h3>
-            <p>We're actively applying cutting edge NLP technology.</p>
-          </div>
+  <!-- Features Section -->
+  <section class="bg-gray-100 py-20">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold mb-8">Key Features</h2>
+      <!-- Add your feature cards or content here -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Simple Implementation</h3>
+          <p>We guide your implementation process, making it simple to add our tool to any website or app, hassle-free.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Integrations</h3>
+          <p>Seamless integrations with your favorite tools for bookings, communication, and smooth operations.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Cutting Edge Technology</h3>
+          <p>We're actively applying cutting-edge NLP technology to enhance your customer interactions and experience.</p>
         </div>
       </div>
-    </section>
+      <!-- "Have a go" button -->
+      <button class="mt-8 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md block mx-auto">Have a go!</button>
+    </div>
+  </section>
 
-    <!-- Pricing Section -->
-    <section class="bg-white py-20">
-      <div class="container mx-auto">
-        <h2 class="text-3xl md:text-5xl font-bold mb-8">Pricing</h2>
-        <!-- Add your pricing options here -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-semibold mb-4">Give it a go</h3>
-            <p>A chatbot indexed on your data; added to your website.></p>
-            <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md">$50 per month</button>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-semibold mb-4">Let's step it up</h3>
-            <p>You've given it a go. We now add Integrations into your other systems.</p>
-            <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md">$250 per month</button>
-          </div>
+  <!-- Pricing Section -->
+  <section class="bg-white py-20">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold mb-8">Pricing</h2>
+      <h3 class="text-xl font-semibold mb-4">We're still in development but will offer tiered pricing.</h3>
+      <!-- Add your pricing options here -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Give it a Go</h3>
+          <p>Get started with a chatbot indexed on your data, seamlessly integrated into your website for just $50 per month.</p>
+          <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md" onclick="openPopup()">Try it now</button>
         </div>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto text-center">
-        <p class="text-sm">&copy; 2023 Connectour. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <!-- Popup -->
-
-    <div id="intercomPopup" class="intercom-popup" onclick="closePopup()">
-      <div class="intercom-popup-content" onclick="event.stopPropagation()">
-        <div class="close-button" onclick="closePopup()">X</div>
-        <iframe src="https://chat.openai.com/" height=100% width=100%></iframe>
-        <!-- Add your form or any other content for the pop-up here -->
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Let's Step it Up</h3>
+          <p>You've tried it, now let us take it to the next level. Integrate with your other systems and enjoy custom branding/styling for $250 per month.</p>
+          <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md" onclick="openPopup()">Upgrade today</button>
+        </div>
       </div>
     </div>
-    
-    <script>
-      function openPopup() {
-        const popup = document.getElementById('intercomPopup');
-        popup.classList.add('active');
-      }
-  
-      function closePopup() {
-        const popup = document.getElementById('intercomPopup');
-        popup.classList.remove('active');
-      }
-    </script>
+  </section>
 
-  </body>
+  <!-- Contact Section -->
+  <section class="bg-gray-200 py-20">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold mb-8">Contact Us</h2>
+      <p class="text-xl">Interested but just want to send an email?</p>
+      <!-- Obfuscated Email Address using JavaScript -->
+      <p class="text-xl mt-4">
+        Email us at:
+        <a id="email" class="text-blue-500"></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2023 Connectour. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Popup -->
+  <div id="intercomPopup" class="intercom-popup" onclick="closePopup()">
+    <div class="intercom-popup-content" onclick="event.stopPropagation()">
+      <div class="close-button" onclick="closePopup()">X</div>
+      <iframe src="https://chat.openai.com/" height="100%" width="100%"></iframe>
+      <!-- Add your form or any other content for the pop-up here -->
+    </div>
+  </div>
+  
+  <script>
+    function openPopup() {
+      const popup = document.getElementById('intercomPopup');
+      popup.classList.add('active');
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('intercomPopup');
+      popup.classList.remove('active');
+    }
+
+    // Obfuscate Email Address
+    document.addEventListener('DOMContentLoaded', function () {
+      var email = "connectour.hq" + "@" + "gmail.com";
+      var emailElement = document.getElementById('email');
+      emailElement.innerText = email;
+      emailElement.setAttribute('href', 'mailto:' + email);
+    });
+  </script>
+</body>
 </html>
