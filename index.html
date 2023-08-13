@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,27 +22,27 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="bg-blue-500 p-4 fixed top-0 w-full z-10">
     <div class="container mx-auto">
-        <div class="flex items-center justify-between">
-            <div class="text-white font-bold text-xl"><a href="/">ConnecTour</a></div>
-            <div class="hidden md:flex space-x-4">
-                <a href="#Features" class="text-white hover:text-blue-300">Features</a>
-                <a href="#Pricing" class="text-white hover:text-blue-300">Pricing</a>
-                <a href="#Contact" class="text-white hover:text-blue-300">Contact</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button class="text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
+      <div class="flex items-center justify-between">
+        <div class="text-white font-bold text-xl"><a href="/">ConnecTour</a></div>
+        <div class="hidden md:flex space-x-4">
+          <a href="#Features" class="text-white hover:text-blue-300">Features</a>
+          <a href="#Pricing" class="text-white hover:text-blue-300">Pricing</a>
+          <a href="#Contact" class="text-white hover:text-blue-300">Contact</a>
         </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -50,7 +51,8 @@
     <div class="container mx-auto py-24">
       <h1 class="text-4xl md:text-6xl font-bold mb-6">Connectour</h1>
       <p class="text-xl md:text-2xl">Connecting Tourism, Empowering Adventures.</p>
-      <button onclick="openPopup()" class="mt-8 px-6 py-3 bg-white text-blue-500 font-semibold rounded-full shadow-md">Join the Journey</button>
+      <button onclick="openPopup()"
+        class="mt-8 px-6 py-3 bg-white text-blue-500 font-semibold rounded-full shadow-md">Join the Journey</button>
     </div>
   </section>
 
@@ -62,7 +64,8 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white rounded-lg p-6 shadow-md">
           <h3 class="text-xl font-semibold mb-4">Simple Implementation</h3>
-          <p>We guide your implementation process, making it simple to add our tool to any website or app, hassle-free.</p>
+          <p>We guide your implementation process, making it simple to add our tool to any website or app, hassle-free.
+          </p>
         </div>
         <div class="bg-white rounded-lg p-6 shadow-md">
           <h3 class="text-xl font-semibold mb-4">Integrations</h3>
@@ -70,11 +73,13 @@
         </div>
         <div class="bg-white rounded-lg p-6 shadow-md">
           <h3 class="text-xl font-semibold mb-4">Cutting Edge Technology</h3>
-          <p>We're actively applying cutting-edge NLP technology to enhance your customer interactions and experience.</p>
+          <p>We're actively applying cutting-edge NLP technology to enhance your customer interactions and experience.
+          </p>
         </div>
       </div>
       <!-- "Have a go" button -->
-      <button class="mt-8 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md block mx-auto">Have a go!</button>
+      <button class="mt-8 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md block mx-auto">Have a
+        go!</button>
     </div>
   </section>
 
@@ -87,13 +92,17 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white rounded-lg p-6 shadow-md">
           <h3 class="text-xl font-semibold mb-4">Give it a Go</h3>
-          <p>Get started with a chatbot indexed on your data, seamlessly integrated into your website for just $50 per month.</p>
-          <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md" onclick="openPopup()">Try it now</button>
+          <p>Get started with a chatbot indexed on your data, seamlessly integrated into your website for just $50 per
+            month.</p>
+          <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md"
+            onclick="openPopup()">Try it now</button>
         </div>
         <div class="bg-white rounded-lg p-6 shadow-md">
           <h3 class="text-xl font-semibold mb-4">Let's Step it Up</h3>
-          <p>You've tried it, now let us take it to the next level. Integrate with your other systems and enjoy custom branding/styling for $250 per month.</p>
-          <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md" onclick="openPopup()">Upgrade today</button>
+          <p>You've tried it, now let us take it to the next level. Integrate with your other systems and enjoy custom
+            branding/styling for $250 per month.</p>
+          <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md"
+            onclick="openPopup()">Upgrade today</button>
         </div>
       </div>
     </div>
@@ -101,6 +110,9 @@
 
   <!-- Contact Section -->
   <section class="bg-gray-200 py-20" id="Contact">
+    <div class="container mx-auto" id="iframe-container">
+      <iframe id="chat-iframe" src="https://iflskysauav4rnmp6myuhpxasi0uheht.lambda-url.ap-southeast-2.on.aws"></iframe>
+    </div>
     <div class="container mx-auto">
       <h2 class="text-3xl md:text-5xl font-bold mb-8">Contact Us</h2>
       <p class="text-xl">Interested but just want to send an email?</p>
@@ -127,7 +139,7 @@
       <!-- Add your form or any other content for the pop-up here -->
     </div>
   </div>
-  
+
   <script>
     function openPopup() {
       const popup = document.getElementById('intercomPopup');
@@ -148,4 +160,5 @@
     });
   </script>
 </body>
+
 </html>
